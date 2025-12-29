@@ -7,10 +7,10 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Миссии", href: "#missions" },
-    { name: "Технологии", href: "#tech" },
-    { name: "О нас", href: "#about" },
-    { name: "Контакты", href: "#contact" },
+    { name: "Missions", href: "#missions" },
+    { name: "Technology", href: "#tech" },
+    { name: "Timeline", href: "#timeline" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -22,12 +22,7 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <motion.a
-            href="#"
-            className="flex items-center gap-3 group"
-            whileHover={{ scale: 1.05 }}
-          >
+          <motion.a href="#" className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }}>
             <div className="relative">
               <Rocket className="w-8 h-8 text-primary animate-pulse-glow" />
               <div className="absolute inset-0 w-8 h-8 bg-primary/30 blur-xl rounded-full" />
@@ -37,7 +32,6 @@ const Navigation = () => {
             </span>
           </motion.a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
               <motion.a
@@ -54,49 +48,22 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6 }}
-            className="hidden md:block"
-          >
-            <Button variant="neon" size="sm">
-              Присоединиться
-            </Button>
+          <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.6 }} className="hidden md:block">
+            <Button variant="neon" size="sm">Join Us</Button>
           </motion.div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsOpen(!isOpen)}
-          >
+          <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden mt-4 pb-4 border-t border-primary/20"
-          >
+          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="md:hidden mt-4 pb-4 border-t border-primary/20">
             <div className="flex flex-col gap-4 pt-4">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="font-body text-lg text-muted-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </a>
+                <a key={item.name} href={item.href} className="font-body text-lg text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>{item.name}</a>
               ))}
-              <Button variant="neon" size="sm" className="mt-2">
-                Присоединиться
-              </Button>
+              <Button variant="neon" size="sm" className="mt-2">Join Us</Button>
             </div>
           </motion.div>
         )}
