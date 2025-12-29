@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Rocket, ArrowRight, Sparkles } from "lucide-react";
+import { GraduationCap, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 
 const CTASection = () => {
@@ -17,18 +17,18 @@ const CTASection = () => {
             <motion.div className="absolute inset-0 rounded-3xl" style={{ background: "linear-gradient(90deg, transparent, hsl(var(--primary) / 0.3), transparent)", backgroundSize: "200% 100%" }} animate={{ backgroundPosition: ["-200% 0", "200% 0"] }} transition={{ duration: 3, repeat: Infinity, ease: "linear" }} />
             <div className="relative z-10 text-center">
               <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 200, delay: 0.2 }} className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/30 mb-8">
-                <Rocket className="w-10 h-10 text-primary" />
+                <GraduationCap className="w-10 h-10 text-primary" />
               </motion.div>
-              <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="font-display text-4xl md:text-5xl font-bold mb-6"><span className="text-foreground">Ready for </span><span className="gradient-text">Launch?</span></motion.h2>
-              <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="font-body text-xl text-muted-foreground max-w-xl mx-auto mb-10">Join the next generation of space explorers. Your journey to the stars begins here.</motion.p>
+              <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="font-display text-4xl md:text-5xl font-bold mb-6"><span className="text-foreground">Ready to </span><span className="gradient-text">Code?</span></motion.h2>
+              <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="font-body text-xl text-muted-foreground max-w-xl mx-auto mb-10">Join thousands of developers who transformed their careers. Start your 7-day free trial today.</motion.p>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="cyber" size="lg" className="group"><Sparkles className="w-5 h-5 mr-2" />Get Started<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></Button>
-                <Button variant="outline" size="lg">Contact Us</Button>
+                <Button variant="cyber" size="lg" className="group"><Sparkles className="w-5 h-5 mr-2" />Start Free Trial<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></Button>
+                <Button variant="outline" size="lg">Schedule Demo</Button>
               </motion.div>
               <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.7 }} className="mt-12 pt-8 border-t border-primary/10">
-                <p className="text-sm text-muted-foreground font-body mb-4">Trusted by leading organizations worldwide</p>
+                <p className="text-sm text-muted-foreground font-body mb-4">Our graduates work at top companies</p>
                 <div className="flex justify-center items-center gap-8 opacity-50">
-                  {["NASA", "ESA", "SpaceX", "Blue Origin"].map((name) => (<span key={name} className="font-display text-lg font-bold text-muted-foreground">{name}</span>))}
+                  {["Google", "Meta", "Amazon", "Microsoft"].map((name) => (<span key={name} className="font-display text-lg font-bold text-muted-foreground">{name}</span>))}
                 </div>
               </motion.div>
             </div>
