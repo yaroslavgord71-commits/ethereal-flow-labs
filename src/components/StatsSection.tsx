@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Zap, Users, Globe2, Rocket } from "lucide-react";
+import { GraduationCap, Users, Briefcase, Award } from "lucide-react";
 
 interface CounterProps {
   from: number;
@@ -33,32 +33,32 @@ const Counter = ({ from, to, duration = 2, suffix = "" }: CounterProps) => {
 
 const stats = [
   {
-    icon: Rocket,
-    value: 156,
-    suffix: "",
-    label: "Successful Launches",
-    description: "Zero failures in 5 years",
+    icon: GraduationCap,
+    value: 25847,
+    suffix: "+",
+    label: "Graduates",
+    description: "Successfully completed courses",
   },
   {
     icon: Users,
-    value: 2847,
-    suffix: "+",
-    label: "Team Members",
-    description: "Across 32 countries",
-  },
-  {
-    icon: Globe2,
-    value: 12,
+    value: 156,
     suffix: "",
-    label: "Space Stations",
-    description: "Orbiting celestial bodies",
+    label: "Expert Mentors",
+    description: "Industry professionals",
   },
   {
-    icon: Zap,
-    value: 99,
+    icon: Briefcase,
+    value: 89,
     suffix: "%",
-    label: "System Uptime",
-    description: "Mission critical reliability",
+    label: "Job Placement",
+    description: "Within 3 months of graduation",
+  },
+  {
+    icon: Award,
+    value: 4.9,
+    suffix: "/5",
+    label: "Student Rating",
+    description: "Based on 10K+ reviews",
   },
 ];
 
@@ -67,7 +67,6 @@ const StatsSection = () => {
 
   return (
     <section id="stats" className="py-32 relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
       <div className="container mx-auto px-6 relative z-10">
@@ -101,7 +100,6 @@ const StatsSection = () => {
               className="relative group"
             >
               <div className="text-center p-8 rounded-2xl bg-card/30 backdrop-blur-sm border border-border/50 hover:border-primary/50 transition-all duration-500">
-                {/* Animated background */}
                 <motion.div
                   className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   initial={false}
@@ -132,7 +130,6 @@ const StatsSection = () => {
                 </div>
               </div>
 
-              {/* Decorative line */}
               <motion.div
                 className="absolute -bottom-4 left-1/2 w-px h-8 bg-gradient-to-b from-primary/50 to-transparent"
                 initial={{ scaleY: 0 }}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Rocket, Menu, X } from "lucide-react";
+import { Code2, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
@@ -7,9 +7,9 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Missions", href: "#missions" },
-    { name: "Technology", href: "#tech" },
-    { name: "Timeline", href: "#timeline" },
+    { name: "Courses", href: "#courses" },
+    { name: "Technologies", href: "#tech" },
+    { name: "Roadmap", href: "#timeline" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -24,11 +24,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <motion.a href="#" className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }}>
             <div className="relative">
-              <Rocket className="w-8 h-8 text-primary animate-pulse-glow" />
+              <Code2 className="w-8 h-8 text-primary animate-pulse-glow" />
               <div className="absolute inset-0 w-8 h-8 bg-primary/30 blur-xl rounded-full" />
             </div>
             <span className="font-display text-xl font-bold tracking-wider text-glow-cyan">
-              NEXUS<span className="text-secondary">.</span>SPACE
+              CODE<span className="text-secondary">.</span>MASTER
             </span>
           </motion.a>
 
@@ -49,7 +49,7 @@ const Navigation = () => {
           </div>
 
           <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.6 }} className="hidden md:block">
-            <Button variant="neon" size="sm">Join Us</Button>
+            <Button variant="neon" size="sm">Start Learning</Button>
           </motion.div>
 
           <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
@@ -63,7 +63,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <a key={item.name} href={item.href} className="font-body text-lg text-muted-foreground hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>{item.name}</a>
               ))}
-              <Button variant="neon" size="sm" className="mt-2">Join Us</Button>
+              <Button variant="neon" size="sm" className="mt-2">Start Learning</Button>
             </div>
           </motion.div>
         )}

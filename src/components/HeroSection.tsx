@@ -13,27 +13,27 @@ const HeroSection = () => {
         <div className="text-center max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-primary/30 mb-8">
             <Sparkles className="w-4 h-4 text-primary animate-pulse" />
-            <span className="text-sm font-body text-muted-foreground tracking-wider uppercase">The Future Starts Today</span>
+            <span className="text-sm font-body text-muted-foreground tracking-wider uppercase">Your Coding Journey Starts Here</span>
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="font-display text-5xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
-            <span className="text-foreground">Conquering</span><br />
-            <span className="gradient-text animate-gradient bg-gradient-to-r from-primary via-accent to-secondary">Infinity</span>
+            <span className="text-foreground">Master</span><br />
+            <span className="gradient-text animate-gradient bg-gradient-to-r from-primary via-accent to-secondary">Programming</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="font-body text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
-            Exploring the boundaries of possibility. Creating technologies that will transform our understanding of space and humanity's future.
+            Learn to code from scratch. Build real projects. Land your dream job in tech. Join thousands of successful developers.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="cyber" size="lg" className="group">
-              <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />Start Your Journey
+              <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />Start Free Trial
             </Button>
-            <Button variant="outline" size="lg">Learn More</Button>
+            <Button variant="outline" size="lg">View Courses</Button>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="grid grid-cols-3 gap-8 mt-20 max-w-3xl mx-auto">
-            {[{ value: "247+", label: "Missions" }, { value: "15K", label: "Explorers" }, { value: "∞", label: "Possibilities" }].map((stat) => (
+            {[{ value: "50+", label: "Courses" }, { value: "25K", label: "Students" }, { value: "98%", label: "Success Rate" }].map((stat) => (
               <motion.div key={stat.label} whileHover={{ scale: 1.05 }} className="text-center p-4 glass-card rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300">
                 <div className="font-display text-3xl md:text-4xl font-bold text-primary text-glow-cyan mb-2">{stat.value}</div>
                 <div className="font-body text-sm text-muted-foreground uppercase tracking-wider">{stat.label}</div>

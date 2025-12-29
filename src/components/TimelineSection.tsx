@@ -3,40 +3,40 @@ import { Calendar, CheckCircle2, Clock, ArrowRight } from "lucide-react";
 
 const timelineEvents = [
   {
-    year: "2024",
-    title: "Foundation",
-    description: "Nexus Space was established with a vision to democratize space travel.",
+    year: "Week 1-4",
+    title: "Foundations",
+    description: "HTML, CSS, JavaScript basics. Build your first interactive websites.",
     status: "completed",
   },
   {
-    year: "2025",
-    title: "First Launch",
-    description: "Successfully launched our first satellite constellation into orbit.",
+    year: "Week 5-8",
+    title: "Frontend Mastery",
+    description: "React, TypeScript, state management. Create dynamic web applications.",
     status: "completed",
   },
   {
-    year: "2026",
-    title: "Lunar Base",
-    description: "Breaking ground on humanity's first permanent lunar settlement.",
+    year: "Week 9-12",
+    title: "Backend Development",
+    description: "Node.js, databases, REST APIs. Build complete server-side systems.",
     status: "current",
   },
   {
-    year: "2028",
-    title: "Mars Mission",
-    description: "First crewed mission to Mars with plans for permanent colonization.",
+    year: "Week 13-16",
+    title: "Advanced Topics",
+    description: "Testing, DevOps, deployment. Prepare for production environments.",
     status: "upcoming",
   },
   {
-    year: "2030",
-    title: "Interstellar Probe",
-    description: "Launching the first interstellar probe beyond our solar system.",
+    year: "Week 17-20",
+    title: "Career Launch",
+    description: "Portfolio projects, interview prep, job placement support.",
     status: "upcoming",
   },
 ];
 
 const TimelineSection = () => {
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section id="timeline" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -46,15 +46,14 @@ const TimelineSection = () => {
           className="text-center mb-20"
         >
           <span className="text-primary text-sm font-medium tracking-[0.3em] uppercase">
-            Our Journey
+            Your Journey
           </span>
           <h2 className="text-4xl md:text-6xl font-heading font-bold mt-4 mb-6">
-            MISSION <span className="text-primary">TIMELINE</span>
+            LEARNING <span className="text-primary">ROADMAP</span>
           </h2>
         </motion.div>
 
         <div className="relative">
-          {/* Central line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary to-primary/50 hidden md:block" />
 
           <div className="space-y-12 md:space-y-0">
@@ -69,7 +68,6 @@ const TimelineSection = () => {
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                {/* Content card */}
                 <div className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
@@ -86,7 +84,6 @@ const TimelineSection = () => {
                     </h3>
                     <p className="text-muted-foreground">{event.description}</p>
                     
-                    {/* Status indicator */}
                     <div className={`flex items-center gap-2 mt-4 ${index % 2 === 0 ? "md:justify-end" : ""}`}>
                       {event.status === "completed" && (
                         <>
@@ -114,7 +111,6 @@ const TimelineSection = () => {
                   </motion.div>
                 </div>
 
-                {/* Center node */}
                 <div className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-background border-2 border-primary relative z-10">
                   <motion.div
                     className={`w-4 h-4 rounded-full ${
@@ -129,14 +125,12 @@ const TimelineSection = () => {
                   />
                 </div>
 
-                {/* Empty space for alternating layout */}
                 <div className="hidden md:block flex-1" />
               </motion.div>
             ))}
           </div>
         </div>
 
-        {/* Future arrow */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -148,7 +142,7 @@ const TimelineSection = () => {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <span className="text-sm font-medium tracking-wider">AND BEYOND</span>
+            <span className="text-sm font-medium tracking-wider">YOUR TECH CAREER AWAITS</span>
             <ArrowRight className="w-4 h-4" />
           </motion.div>
         </motion.div>

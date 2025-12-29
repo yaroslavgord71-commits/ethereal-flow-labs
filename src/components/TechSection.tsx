@@ -1,14 +1,14 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
-import { Cpu, Shield, Wifi, Atom, Battery, Radio } from "lucide-react";
+import { FileCode, Database, Cloud, Cpu, Palette, Terminal } from "lucide-react";
 
 const technologies = [
-  { icon: Cpu, title: "Quantum Computing", description: "Next-gen processors for deep space navigation" },
-  { icon: Shield, title: "Nano Protection", description: "Self-healing materials for radiation shielding" },
-  { icon: Wifi, title: "Laser Communication", description: "Instant data transmission across interplanetary distances" },
-  { icon: Atom, title: "Fusion Engine", description: "Revolutionary thrust for interstellar travel" },
-  { icon: Battery, title: "Antimatter Core", description: "Inexhaustible energy source for long missions" },
-  { icon: Radio, title: "AI Piloting", description: "Autonomous spacecraft control systems" },
+  { icon: FileCode, title: "React & TypeScript", description: "Build modern, type-safe user interfaces" },
+  { icon: Database, title: "SQL & NoSQL", description: "Master PostgreSQL, MongoDB, and Redis" },
+  { icon: Cloud, title: "Cloud & DevOps", description: "AWS, Docker, Kubernetes deployment" },
+  { icon: Cpu, title: "AI & Machine Learning", description: "Python, TensorFlow, neural networks" },
+  { icon: Palette, title: "UI/UX Design", description: "Figma, design systems, accessibility" },
+  { icon: Terminal, title: "System Design", description: "Architecture, scaling, microservices" },
 ];
 
 const TechCard = ({ tech, index }: { tech: typeof technologies[0]; index: number }) => {
@@ -48,9 +48,9 @@ const TechSection = () => {
     <section id="tech" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text-center mb-20">
-          <span className="inline-block px-4 py-1 rounded-full glass-card border border-accent/30 text-accent text-sm font-body uppercase tracking-widest mb-4">Technology</span>
-          <h2 className="font-display text-4xl md:text-6xl font-bold mb-6"><span className="text-foreground">Beyond </span><span className="gradient-text">Possible</span></h2>
-          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">Innovations that seemed like science fiction yesterday are becoming reality today</p>
+          <span className="inline-block px-4 py-1 rounded-full glass-card border border-accent/30 text-accent text-sm font-body uppercase tracking-widest mb-4">Tech Stack</span>
+          <h2 className="font-display text-4xl md:text-6xl font-bold mb-6"><span className="text-foreground">Learn </span><span className="gradient-text">In-Demand Skills</span></h2>
+          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">Industry-relevant technologies that top companies are hiring for right now</p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {technologies.map((tech, index) => (<TechCard key={tech.title} tech={tech} index={index} />))}
