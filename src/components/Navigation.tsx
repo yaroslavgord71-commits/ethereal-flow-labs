@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
@@ -24,11 +24,13 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <motion.a href="#" className="flex items-center gap-3 group" whileHover={{ scale: 1.05 }}>
             <div className="relative">
-              <Code2 className="w-8 h-8 text-primary animate-pulse-glow" />
+              <svg className="w-8 h-8 text-primary animate-pulse-glow" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.41 16.09V16.9c-1.4-.13-2.55-.6-3.54-1.39l1.12-1.61c.76.6 1.57.96 2.42 1.06V12.4c-1.69-.36-3.25-1.07-3.25-3.03 0-1.76 1.4-2.98 3.25-3.19V5.09h1.36v1.1c1.17.13 2.14.5 2.96 1.11l-1.04 1.56c-.63-.43-1.29-.72-1.92-.82v2.42c1.77.38 3.36 1.04 3.36 3.08 0 1.81-1.38 3.05-3.36 3.24v1.31h-1.36zm0-10.6c-.88.12-1.48.64-1.48 1.38 0 .68.48 1.13 1.48 1.44V7.49zm1.36 9.02c.93-.12 1.56-.64 1.56-1.44 0-.73-.51-1.21-1.56-1.52v2.96z"/>
+              </svg>
               <div className="absolute inset-0 w-8 h-8 bg-primary/30 blur-xl rounded-full" />
             </div>
             <span className="font-display text-xl font-bold tracking-wider text-glow-cyan">
-              CODE<span className="text-secondary">.</span>MASTER
+              Code<span className="text-secondary">Master</span>
             </span>
           </motion.a>
 
